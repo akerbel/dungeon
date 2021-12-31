@@ -2,12 +2,6 @@ if (collision_circle(x, y, aggro_radius, obj_player, false, true)) {
 	state = states.alert;
 }
 
-var player = collision_circle(x, y, attack_radius, obj_player, false, true);
-if (player) {
-	state = states.attack;
-	dir = point_direction(x, y, player.x, player.y);
-}
-
 sprite_index = sprites[state];
 
 if (state == states.idle) {
@@ -52,12 +46,13 @@ else if (state == states.wander) {
 
 else if (state == states.alert) {
 
-	// Following the target
-	enemy_choose_alert(self, obj_player);
-	if (!place_meeting(x + move_x, y + move_y, obj_player)) {
-		x += move_x;
-		y += move_y;
-		image_xscale = sign(move_x) ?? 1;
+	if (instance_exists(obj_player)) {
+		var player = instance_nearest(x, y, obj_player);
+		mp_potential_step_object(player.x, player.y, speed_alert, obj_no_move_1);
+		if (sign(player.x - x) != 0) {
+			image_xscale = sign(player.x - x);
+		}
+		
 	}
 	
 	// Stop following
@@ -65,15 +60,5 @@ else if (state == states.alert) {
 		state = states.idle;
 		enemy_choose_wander(self);
 	}
-	
-}
-
-else if (state == states.attack) {
-	
-	if (alarm[0] == -1) {
-		alarm[0] = attack_delay;
-	}
-	
-	state = states.idle;
 	
 }

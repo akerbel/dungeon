@@ -90,7 +90,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Effects",
-    "path": "folders/Sprites/Character/Effects.yy",
+    "path": "folders/Sprites/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_slash_1",

@@ -1,1 +1,1 @@
-alarm[0] = attack_speed;
+alarm[0] = life_time;
