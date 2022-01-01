@@ -1,5 +1,6 @@
-if (collision_circle(x, y, aggro_radius, obj_player, false, true)) {
+if (state != states.alert && collision_circle(x, y, aggro_radius, obj_player, false, true)) {
 	state = states.alert;
+	play_sound(sound[sound_types.alert]);
 }
 
 sprite_index = sprites[state];

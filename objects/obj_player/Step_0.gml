@@ -22,9 +22,13 @@ if (move_x != 0 || move_y != 0) {
 	
 	// Find character move distantion regarding collisions.
 	if (!place_free(x+move_x, y+move_y)) {
-		while (!place_free(x+move_x, y+move_y)) {
-			move_x -= sign(move_x);
-			move_y -= sign(move_y);
+		while (!place_free(x+move_x, y+move_y) || (move_x > 0 && move_y > 0)) {
+			if (move_x > 0) {
+				move_x -= sign(move_x);
+			}
+			if (move_y > 0) {
+				move_y -= sign(move_y);
+			}
 		}	
 	}
 	

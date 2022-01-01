@@ -6,6 +6,12 @@ enum states {
 	locked
 }
 
+enum sound_types {
+	death,
+	damage,
+	alert
+}
+
 global.debug = true;
 
 //randomize();
