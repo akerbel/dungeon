@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Effects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "melee_attack",
+  "name": "weapon_attack",
   "tags": [],
   "resourceType": "GMScript",
 }

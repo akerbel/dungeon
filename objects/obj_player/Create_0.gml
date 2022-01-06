@@ -13,3 +13,6 @@ sprites[states.attack] = spr_human_1;
 sound[sound_types.death] = [
 	snd_human_death_1
 ];
+
+// Change weapon object
+weapon = obj_arrow;

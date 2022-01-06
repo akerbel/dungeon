@@ -21,7 +21,7 @@ if (move_x != 0 || move_y != 0) {
 	dir = point_direction(x, y, x+move_x, y+move_y);
 	
 	// Find character move distantion regarding collisions.
-	if (!place_free(x+move_x, y+move_y)) {
+	/*if (!place_free(x+move_x, y+move_y)) {
 		while (!place_free(x+move_x, y+move_y) || (move_x > 0 && move_y > 0)) {
 			if (move_x > 0) {
 				move_x -= sign(move_x);
@@ -30,11 +30,14 @@ if (move_x != 0 || move_y != 0) {
 				move_y -= sign(move_y);
 			}
 		}	
+	}*/
+	
+	if (place_free(x+move_x, y+move_y)) {
+		// Move character.
+		x += move_x;
+		y += move_y;
 	}
 	
-	// Move character.
-	x += move_x;
-	y += move_y;
 	
 	// Turn the sprite regarding direction.
 	if (move_x != 0) {
@@ -45,5 +48,5 @@ if (move_x != 0 || move_y != 0) {
 
 // Melee attack.
 if (keyboard_check_pressed(vk_space)) {
-	melee_attack(weapon, self);
+	weapon_attack(weapon, self);
 }

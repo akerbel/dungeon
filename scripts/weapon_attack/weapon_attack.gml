@@ -2,14 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 /*
- * Melee attack.
+ * Weapon attack.
  *
  * @param object id attach_effect
  * @param object attacker
  *
  * return Effect object.
  */
-function melee_attack(attack_effect, attacker) {
+function weapon_attack(attack_effect, attacker) {
 	var attack_x = x;
 	var attack_y = y;
 	
