@@ -29,7 +29,7 @@ else if (state == states.wander) {
 	else {
 		x += move_x;
 		y += move_y;
-		image_xscale = sign(move_x) ?? 1;;
+		image_xscale = sign(move_x) ?? 1;
 	}
 	
 	if (counter >= room_speed * behavior_change_speed) {
@@ -51,7 +51,7 @@ else if (state == states.alert) {
 		var player = instance_nearest(x, y, obj_player);
 		mp_potential_step_object(player.x, player.y, speed_alert, obj_no_move_1);
 		if (sign(player.x - x) != 0) {
-			image_xscale = sign(player.x - x);
+			image_xscale = sign(player.x - x) ?? 1;
 		}
 		
 	}

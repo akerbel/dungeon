@@ -15,4 +15,10 @@ sound[sound_types.death] = [
 ];
 
 // Change weapon object
-weapon = obj_arrow;
+weapon = obj_firebolt;
+weapon_heavy = obj_fireball;
+cast_time = 1;
+cast_heavy_time = 30;
+
+// Player custom code.
+cast_timer = -1;

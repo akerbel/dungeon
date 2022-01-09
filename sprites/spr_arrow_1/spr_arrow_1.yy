@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Effects",
-    "path": "folders/Sprites/Effects.yy",
+    "name": "Throwable",
+    "path": "folders/Sprites/Effects/Throwable.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_arrow_1",

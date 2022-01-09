@@ -14,39 +14,38 @@ if (keyboard_check(ord("W"))) {
 	move_y -= speed_walk;
 }
 
-
-if (move_x != 0 || move_y != 0) {
-	
-	// Find character direction.
-	dir = point_direction(x, y, x+move_x, y+move_y);
-	
-	// Find character move distantion regarding collisions.
-	/*if (!place_free(x+move_x, y+move_y)) {
-		while (!place_free(x+move_x, y+move_y) || (move_x > 0 && move_y > 0)) {
-			if (move_x > 0) {
-				move_x -= sign(move_x);
-			}
-			if (move_y > 0) {
-				move_y -= sign(move_y);
-			}
-		}	
-	}*/
-	
-	if (place_free(x+move_x, y+move_y)) {
-		// Move character.
-		x += move_x;
-		y += move_y;
-	}
-	
-	
-	// Turn the sprite regarding direction.
-	if (move_x != 0) {
-		image_xscale = sign(move_x);
-	}
-	
+// Move character.
+if ((move_x != 0 || move_y != 0) && place_free(x+move_x, y+move_y)) {
+	x += move_x;
+	y += move_y;
 }
 
-// Melee attack.
-if (keyboard_check_pressed(vk_space)) {
-	weapon_attack(weapon, self);
+// Find character direction.
+dir = point_direction(x, y, device_mouse_x(0), device_mouse_y(0));
+
+// Turn the sprite regarding direction.
+image_xscale = device_mouse_x(0) - x >= 0 ? 1 : -1;
+
+
+// Casting spells.
+// Start casting.
+if (device_mouse_check_button_pressed(0, mb_left) && cast_timer == -1) {
+	cast_timer = 0;
+}
+if (cast_timer != -1) {
+	cast_timer++;
+}
+
+// Finish casting.
+if (device_mouse_check_button_released(0, mb_left)) {
+	
+	// Heavy attack.
+	if (cast_timer >= cast_heavy_time) {
+		weapon_attack(weapon_heavy, self);
+	}
+	// Simple attack.
+	else if (cast_timer >= cast_time) {
+		weapon_attack(weapon, self);
+	}
+	cast_timer = -1;
 }

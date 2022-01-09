@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_arrow_1",
-    "path": "sprites/spr_arrow_1/spr_arrow_1.yy",
+    "name": "spr_firebolt",
+    "path": "sprites/spr_firebolt/spr_firebolt.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +33,7 @@
     "path": "folders/Objects/Effects/Throwable.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_arrow",
+  "name": "obj_firebolt",
   "tags": [],
   "resourceType": "GMObject",
 }

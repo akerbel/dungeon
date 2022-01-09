@@ -9,4 +9,6 @@ if (!variable_instance_exists(id, "sound")) {
 	];
 }
 
+image_angle = irandom_range(0, 360);
+
 play_sound(sound);
