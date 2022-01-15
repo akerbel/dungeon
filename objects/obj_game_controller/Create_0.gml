@@ -19,6 +19,11 @@ enum magic_states {
 	finishing
 }
 
+enum door_states {
+	closed,
+	opened
+}
+
 global.debug = true;
 
 //randomize();
