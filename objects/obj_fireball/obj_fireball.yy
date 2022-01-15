@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_firebolt",
-    "path": "objects/obj_firebolt/obj_firebolt.yy",
+    "name": "obj_magic",
+    "path": "objects/obj_magic/obj_magic.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"cast_time","path":"objects/obj_throwable/obj_throwable.yy",},"objectId":{"name":"obj_throwable","path":"objects/obj_throwable/obj_throwable.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"obj_throwable","path":"objects/obj_throwable/obj_throwable.yy",},"objectId":{"name":"obj_throwable","path":"objects/obj_throwable/obj_throwable.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Throwable",
-    "path": "folders/Objects/Effects/Throwable.yy",
+    "name": "Magic",
+    "path": "folders/Objects/Magic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_fireball",

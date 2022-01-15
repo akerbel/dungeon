@@ -3,13 +3,20 @@ enum states {
 	wander,
 	alert,
 	attack,
-	locked
+	locked,
+	damaged,
+	dead
 }
 
 enum sound_types {
 	death,
 	damage,
 	alert
+}
+
+enum magic_states {
+	going,
+	finishing
 }
 
 global.debug = true;

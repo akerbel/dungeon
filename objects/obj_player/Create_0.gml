@@ -8,6 +8,9 @@ sprites[states.idle] = spr_human_1;
 sprites[states.wander] = spr_human_1;
 sprites[states.alert] = spr_human_1;
 sprites[states.attack] = spr_human_1;
+sprites[states.damaged] = spr_human_1;
+sprites[states.dead] = spr_human_1;
+
 
 // Change default sounds
 sound[sound_types.death] = [

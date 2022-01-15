@@ -9,9 +9,10 @@
  */
 function play_sound(sounds, priority = 10) {
 	
-	audio_play_sound(
-		sounds[irandom_range(0, array_length(sounds)-1)],
-		priority, false
-	);
+	var sound_id = irandom_range(0, array_length(sounds)-1);
+	
+	if (!audio_is_playing(sound_id)) {
+		audio_play_sound(sounds[sound_id],priority, false);
+	}
 
 }

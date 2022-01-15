@@ -1,9 +1,7 @@
-if (state != states.alert && collision_circle(x, y, aggro_radius, obj_player, false, true)) {
+if (state != states.alert && state != states.dead && collision_circle(x, y, aggro_radius, obj_player, false, true)) {
 	state = states.alert;
-	play_sound(sound[sound_types.alert]);
+	play_sound(sounds[sound_types.alert]);
 }
-
-sprite_index = sprites[state];
 
 if (state == states.idle) {
 
@@ -49,7 +47,7 @@ else if (state == states.alert) {
 
 	if (instance_exists(obj_player)) {
 		var player = instance_nearest(x, y, obj_player);
-		mp_potential_step_object(player.x, player.y, speed_alert, obj_no_move_1);
+		mp_potential_step_object(player.x, player.y, speed_alert, obj_collision);
 		if (sign(player.x - x) != 0) {
 			image_xscale = sign(player.x - x) ?? 1;
 		}

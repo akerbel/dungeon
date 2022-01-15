@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_blob_1",
-    "path": "sprites/spr_blob_1/spr_blob_1.yy",
+    "name": "spr_blob_small_idle",
+    "path": "sprites/spr_blob_small_idle/spr_blob_small_idle.yy",
   },
   "solid": false,
   "visible": true,
